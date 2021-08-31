@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 // Put your device token here (without spaces):
 
 
