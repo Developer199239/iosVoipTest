@@ -9,7 +9,7 @@ $deviceToken = 'fb28f93f0f7eb664de83d9970e48123bc5e7e292ba71087de1e7607cd2d8d564
 
 
 // Put your private key's passphrase here:
-$passphrase = '1';
+$passphrase = '1234';
 
 // Put your alert message here:
 $message = 'My first silent push notification!';
@@ -17,7 +17,7 @@ $message = 'My first silent push notification!';
 
 
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', 'apns-dev.pem');
+stream_context_set_option($ctx, 'ssl', 'local_cert', 'ApnsDev.pem');
 stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
