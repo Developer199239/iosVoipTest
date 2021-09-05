@@ -2,7 +2,7 @@
 // Put your device token here (without spaces):
 
 
-$deviceToken = 'fb28f93f0f7eb664de83d9970e48123bc5e7e292ba71087de1e7607cd2d8d564';
+$deviceToken = 'd5b6b488143d7bf6b8776b907841e4956a4af3ba26eb4eeff430f1c5dd83d542';
 // $deviceToken = '2b53809de9b630199d2a1026918da67719a14bbcbf6f6e1b06c3f181c5558f6c';
 
 //
