@@ -2,8 +2,8 @@
 // Put your device token here (without spaces):
 
 
-$deviceToken = '2CBDC25041206F816A5D5E95C21557DBC614C6F5BFAA57D1990E1AA747D02D30';
-//$deviceToken = 'fb28f93f0f7eb664de83d9970e48123bc5e7e292ba71087de1e7607cd2d8d564';
+//$deviceToken = '2CBDC25041206F816A5D5E95C21557DBC614C6F5BFAA57D1990E1AA747D02D30';
+$deviceToken = 'fb28f93f0f7eb664de83d9970e48123bc5e7e292ba71087de1e7607cd2d8d564';
 
 //
 
@@ -17,7 +17,7 @@ $message = 'My first silent push notification!';
 
 
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', '/app/apns-san-pro-cert.pem');
+stream_context_set_option($ctx, 'ssl', 'local_cert', 'apns-dev.pem');
 //stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
