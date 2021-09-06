@@ -17,7 +17,7 @@ $message = 'My first silent push notification!';
 
 
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', 'apns-dev.pem');
+stream_context_set_option($ctx, 'ssl', 'local_cert', 'apns-dev_1.pem');
 //stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
