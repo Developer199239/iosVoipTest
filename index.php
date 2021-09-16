@@ -18,7 +18,7 @@ $message = 'My first silent push notification!';
 
 
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', 'cebod_san_push_cert.pem');
+stream_context_set_option($ctx, 'ssl', 'local_cert', '/app/cebod_san_push_cert.pem');
 stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
