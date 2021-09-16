@@ -1,9 +1,10 @@
 <?php
+
 // Put your device token here (without spaces):
 
 
-//$deviceToken = '2CBDC25041206F816A5D5E95C21557DBC614C6F5BFAA57D1990E1AA747D02D30';
-$deviceToken = 'fb28f93f0f7eb664de83d9970e48123bc5e7e292ba71087de1e7607cd2d8d564';
+//$deviceToken = 'fc51e36cd18b8f2dbe17eb268124f4881d4c83ff70bd139dcff8e81b25cc3d8a';
+ $deviceToken = 'C8F79797A2E325DBE37554289CB6C1BF0205B3347D8DAD0937137B48F7CCB946';
 
 //
 
@@ -17,12 +18,14 @@ $message = 'My first silent push notification!';
 
 
 $ctx = stream_context_create();
-stream_context_set_option($ctx, 'ssl', 'local_cert', '/app/apns-dev_1.pem');
-stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+stream_context_set_option($ctx, 'ssl', 'local_cert', 'apns-san-pro-cert.pem');
+//stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
-$fp = stream_socket_client('ssl://gateway.sandbox.push.apple.com:2195', $err, $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
-
+$fp = stream_socket_client(
+//  'ssl://gateway.push.apple.com:2195', $err,
+'ssl://gateway.sandbox.push.apple.com:2195', $err,
+$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
 
 if (!$fp)
 exit("Failed to connect: $err $errstr" . PHP_EOL);
@@ -59,4 +62,3 @@ echo 'Message successfully delivered' . PHP_EOL;
 fclose($fp);
 
 ?>
-
