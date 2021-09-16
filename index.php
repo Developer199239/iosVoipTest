@@ -10,7 +10,7 @@
 
 
 // Put your private key's passphrase here:
-$passphrase = '1234';
+$passphrase = "1234";
 
 // Put your alert message here:
 $message = 'My first silent push notification!';
